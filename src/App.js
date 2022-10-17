@@ -66,13 +66,13 @@ class App extends React.Component {
         <div className='row m-5'>
           <div className='row d-flex justify-content-around'>
             <button 
-              className='col-5 btn btn-warning' 
+              className='col-5 btn bg-primary bg-gradient text-white' 
               onClick={() => this.tabOnglets('Personnages')}            
             >
               Personnages
             </button>
             <button 
-              className='col-5 btn btn-success' 
+              className='col-5 btn bg-dark bg-gradient text-white' 
               onClick={() => this.tabOnglets('Continents')}            
             >
               Continents
@@ -84,6 +84,9 @@ class App extends React.Component {
           <>
             {isFavorite ? (
               <>
+                <div className='row text-center'>
+                  <h2 className='mb-5'><ins>Liste des favoris</ins></h2>
+                </div>
                 <div className='row'>
                   {favorites.map((favorite, index) => (
                     <div className='col-3 mb-5'>
@@ -141,8 +144,13 @@ class App extends React.Component {
               </>
             )}
           </>
-        : 
+        :
+         <>
+          <div className='row text-center'>
+            <h2 className='mb-5'><ins>Continents</ins></h2>
+          </div>
           <Continents />
+         </>
         }
       </div>
 		)

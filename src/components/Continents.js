@@ -20,8 +20,7 @@ class Continents extends Component {
         const { continents } = this.state
 
         return (
-            <div>
-                <h2>Continents</h2>
+            <div className='text-center'>
                 {continents.map((continent, index) => {
                     return <p key={index}>{continent.name}</p>
                 })}
